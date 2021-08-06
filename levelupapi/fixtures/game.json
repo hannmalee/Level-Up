@@ -1,0 +1,26 @@
+[
+    {
+        "model": "levelupapi.game",
+        "pk": 1,
+        "fields": {
+            "name": "Chess",
+            "game_type": 1,
+            "description": "classic game",
+            "number_of_players": "2",
+            "gamer": 1, 
+            "maker": "unknown"
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 2,
+        "fields": {
+            "name": "Clue",
+            "game_type": 1,
+            "description": "game of deduction to find out who the murder is",
+            "number_of_players": "6",
+            "gamer": 1, 
+            "maker": "hasbro"
+        }
+    }
+]
