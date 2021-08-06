@@ -5,7 +5,7 @@
         "fields": {
             "name": "Chess",
             "game_type": 1,
-            "description": "classic game",
+            "description": "classic games",
             "number_of_players": "2",
             "gamer": 1, 
             "maker": "unknown"
