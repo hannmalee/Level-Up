@@ -1,0 +1,26 @@
+[
+    {
+        "model": "levelupapi.event",
+        "pk": 1,
+        "fields": {
+            "host": 1,
+            "game": 1,
+            "date": "2021-08-08",
+            "time": "21:30",
+            "description": "byob", 
+            "title": "chess meetup"
+        }
+    },
+    {
+        "model": "levelupapi.event",
+        "pk": 2,
+        "fields": {
+            "host": 1,
+            "game": 2,
+            "date": "2021-08-09",
+            "time": "21:00",
+            "description": "casual", 
+            "title": "best game ever"
+        }
+    }
+]
