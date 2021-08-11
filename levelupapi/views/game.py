@@ -90,7 +90,7 @@ class GameView(ViewSet):
         game.number_of_players = request.data["numberOfPlayers"]
         game.skill_level = request.data["skillLevel"]
         game.gamer = gamer
-
+        game.description = request.data["description"]
         game_type = GameType.objects.get(pk=request.data["gameTypeId"])
         game.game_type = game_type
         game.save()
