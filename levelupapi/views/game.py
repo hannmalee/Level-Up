@@ -26,11 +26,12 @@ class GameView(ViewSet):
         # and set its properties from what was sent in the
         # body of the request from the client.
         game = Game()
-        game.title = request.data["title"]
+        game.name = request.data["name"]
         game.maker = request.data["maker"]
         game.number_of_players = request.data["numberOfPlayers"]
         game.skill_level = request.data["skillLevel"]
         game.gamer = gamer
+        game.description = request.data["description"]
 
         # Use the Django ORM to get the record from the database
         # whose `id` is what the client passed as the
@@ -84,12 +85,12 @@ class GameView(ViewSet):
         # creating a new instance of Game, get the game record
         # from the database whose primary key is `pk`
         game = Game.objects.get(pk=pk)
-        game.title = request.data["title"]
+        game.name = request.data["name"]
         game.maker = request.data["maker"]
         game.number_of_players = request.data["numberOfPlayers"]
         game.skill_level = request.data["skillLevel"]
         game.gamer = gamer
-
+        game.description = request.data["description"]
         game_type = GameType.objects.get(pk=request.data["gameTypeId"])
         game.game_type = game_type
         game.save()
@@ -145,5 +146,5 @@ class GameSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Game
-        fields = ('id', 'title', 'maker', 'number_of_players', 'skill_level', 'game_type')
+        fields = ('id', 'name', 'maker', 'number_of_players', 'skill_level', 'game_type', 'description')
         depth = 1
