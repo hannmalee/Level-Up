@@ -41,5 +41,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
     path('gametypes', GameTypeView.as_view({'get': 'name'}), name='game_type'),
-    path('games', GameView, name="game")
+    path('games', GameView, name="game"),
+    path('events', EventView, name="event")
 ]
