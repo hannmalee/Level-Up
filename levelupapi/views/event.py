@@ -8,7 +8,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from levelupapi.models import Game, Event, Gamer
-from levelupapi.views.game import GameSerializer
+# from levelupapi.views.game import GameSerializer
 
 
 class EventView(ViewSet):
@@ -160,3 +160,4 @@ class EventSerializer(serializers.ModelSerializer):
         model = Event
         fields = ('id', 'game', 'host',
                 'description', 'date', 'time', 'joined', 'attendee_count')
+                
