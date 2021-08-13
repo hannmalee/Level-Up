@@ -8,6 +8,16 @@ class Event(models.Model):
     description = models.TextField()
     title = models.CharField(max_length=100)
     attendees = models.ManyToManyField("Gamer", through="EventGamer", related_name="attending")
+
+    @property # ??
+    def joined(self):
+        return self.__joined
+
+    @joined.setter
+    def joined(self, value): 
+        self.__joined = value
     
-    def __str__(self):
-        return self.name
+    @property
+    def attendee_count(self): 
+        length = len(self.attendees.all())
+        return length
